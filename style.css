@@ -71,16 +71,25 @@ section{
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
+
 .topo-site .logo{
     font-family: "Anta", sans-serif; 
     font-size: 2.5rem;
     color: black;
     font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
 }
 .topo-site .logo i{
     color: blue;
     padding-right: .5rem;
     rotate: 175deg;
+}
+.topo-site .logo img{
+ width: 25px;
+ border-radius: 50%;
 }
 
 .topo-site .menu-site a{
