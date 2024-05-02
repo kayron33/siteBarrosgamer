@@ -1,0 +1,853 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200; 1.300;1.400;1.500;1.600;1.700;1.800;1.900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+
+*{
+font-family: "Poppins", sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: none;
+text-decoration: none;
+border: none;
+text-transform: capitalize;
+transform: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+
+.btn{
+    display: inline-block;
+    font-size: 1.7rem;
+    color: white;
+    background: green;
+    margin-top:1rem ;
+    padding: .8rem 3rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+    cursor: pointer;
+    
+}
+.btn:hover{
+    background: white;
+    color: black;
+    font-weight: 600;
+    border: 1px solid black;
+}
+section{
+    padding: 3rem 7%;
+}
+.titulo{
+    font-size: 2.8rem;
+    color: white;
+    padding: 1.2rem 0;
+    text-align: center;
+    border-bottom: .1rem solid rgb(141, 131, 131);
+    
+}
+.titulo span{
+    color: red;
+}
+/*INICIO CABEÇALHO DO SITE */
+
+.topo-site{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    z-index: 1000;
+    background: black;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.topo-site .logo{
+    font-family: "Anta", sans-serif; 
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bolder;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+.topo-site .logo:hover{
+    color: red;
+}
+.topo-site .logo i{
+    color: white;
+    padding-right: .5rem;
+    rotate: 175deg;
+    
+}
+.topo-site .logo img{
+    border-radius: 50%;
+    width: 4rem;
+ 
+    
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.topo-site .menu-site a{
+    color: white;
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    
+
+
+}
+.topo-site .menu-site a:hover{
+    color: red;
+    font-weight: 400;
+
+}
+.topo-site .icons div{
+    color: white ;
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+.topo-site .icons div:hover{
+    color: red;
+}
+#menu {
+    display: none;
+    color: white;
+  
+}
+#menu:hover{
+    color: red;
+
+}
+.topo-site .carrinho{
+    width: 35rem;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 115%;
+    right: -105%;
+    padding: 2rem;
+
+}
+.topo-site .carrinho.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+.topo-site .carrinho .box{
+    position: relative;
+    display: flex;
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+    align-items: center;
+}
+.topo-site .carrinho .box .fa-times{
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #777;
+    cursor: pointer;
+}
+.topo-site .carrinho .box .fa-times:hover{
+    color: red;
+}
+.topo-site .carrinho .box img{
+    height: 10rem;
+}
+.topo-site .carrinho .box .content h3{
+    font-size: 1.7rem;
+    padding-bottom: .5rem;
+    color: #130f40;
+
+
+}
+.topo-site .carrinho .box .content span{
+    font-size: 1.7rem;
+    color: #777;
+}
+.topo-site .carrinho .box .content span .multiplica{
+    margin: 0.5rem;
+}
+.topo-site .carrinho .total{
+    font-size: 2.2rem;
+    color:#130f40 ;
+    text-align: center;
+
+}
+.topo-site .carrinho .btn{
+    width: 100%;
+    text-align: center;
+}
+
+.topo-site .login-form{
+    position: absolute;
+    top: 115%;
+    right: -105%;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    width: 35rem;
+    padding: 2rem;
+}
+.topo-site .login-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+.topo-site .login-form h3{
+    font-size: 2.2rem;
+    color: #130f40;
+    text-transform: uppercase;
+    margin-bottom: .7rem;
+    text-align: center;
+
+
+}
+.topo-site .login-form .box{
+    margin: .7rem 0;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-transform: none;
+    color: #130f40;
+}
+.topo-site .login-form .lembrar-senha{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .7rem 0;
+
+}
+.topo-site .login-form .lembrar-senha label{
+ font-size: 1.5rem;
+ color: #777;
+ cursor: pointer;
+}
+.topo-site .login-form .btn{
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+
+/*TOPO PAGINAS*/
+.topo-paginas{
+    background: yellow;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 12rem;
+    padding-bottom: 8rem;
+
+}
+.topo-paginas h1{
+    color: black;
+    font-size: 4rem;
+}
+.topo-paginas p{
+    padding-top: 1rem;
+    font-size: 2rem;
+    color: blue;
+}
+.topo-paginas p a{
+    color: rgba(0, 0, 255, 0.473);
+    padding-right: .5rem;
+}
+/*SLIDE*/
+
+
+.msflix-destaque{
+    padding: 0;
+}
+.msflix-destaque .slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.msflix-destaque .slide .content{
+    display: none;
+    width: 60rem;
+    text-align: center;
+
+}
+.msflix-destaque .slide .content h3{
+   font-size: 6rem;
+   line-height: 1.3;
+   color: rgb(110, 107, 107); 
+   padding: 2rem 0;
+   animation: sliderMaykon 1s ease forwards;
+}
+.msflix-destaque .slide .content span{
+color: rgb(102, 89, 16);
+
+}
+.msflix-destaque .slide .content .btn{
+    background: white;
+    color: black;
+}
+.msflix-destaque .slide .content .btn:hover{
+    background: black ;
+    color: white;
+    border: none;
+    font-weight: 600;
+    animation: sliderReveal 1s ease forwards;
+    border: 1px solid white;
+}
+.msflix-destaque .swiper-slide-active .content{
+    display: inline-block;
+} 
+.msflix-destaque .swiper-slide-active{
+    animation: msflixScale 4s linear forwards;
+}
+
+@keyframes sliderMaykon{
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes msflixScale{
+    0%{
+        transform: scale(1);
+        
+    }
+    100%{
+        transform: scale(1.15);
+    }
+}
+.swiper-button-prev,
+.swiper-button-next{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    margin-left: 1.5rem;
+    color: green;
+    border: .1px solid white;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+font-size: 1.5rem;
+transform: rotate(-45deg);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+color: white;
+background-color: black;
+}
+
+
+/*TOPO PAGINAS*/
+.topo-paginas{
+    background: black;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 12rem;
+    padding-bottom: 8rem;
+    border-bottom: 2px solid white;
+
+}
+.topo-paginas h1{
+    color: white;
+    font-size: 4rem;
+}
+.topo-paginas p{
+    padding-top: 1rem;
+    font-size: 2rem;
+    color: white;
+}
+.topo-paginas p a{
+    color: white;
+    padding-right: .5rem;
+}
+/*patrocinio*/
+.titulo-patro h1{
+    color: green;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 3.5rem;
+    border-bottom: 1px solid white;
+}
+
+.patrocinio{
+    display: grid;
+grid-template-columns: repeat(auto-fit,Minmax(30rem, 1fr));
+padding-top: 3rem;
+padding-bottom: 3rem;
+border-bottom: 1px solid white;
+
+
+
+
+
+
+
+}
+.patrocinio .patrocinio-img{
+    width: 245px;
+    margin: auto;
+   
+    
+   
+   
+
+   
+
+  
+    
+    
+}
+
+.patrocinio .patrocinio-img img{
+    width:100% ;
+   
+    border-radius: 50%;
+    object-fit: cover;
+    transition:  1s ;
+    border: 3px solid white;
+    
+ 
+ 
+ 
+
+}
+.patrocinio .patrocinio-img img:hover{
+    transform: scale(1.2);
+}
+.patrocinio .patrocinio-img .name-patro{
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 2.9rem;
+   
+}
+
+
+
+
+
+/*patrocinio*/
+
+/*EMPRESA*/
+.empresa{
+   
+}
+.empresa .row{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5rem;
+    padding-left: .9rem;
+    gap: 4rem;
+    
+    align-items: center;
+}
+.empresa .row .empresa-img{
+    flex: 1 1 32rem;
+}
+.empresa .row .empresa-img img{
+    width: 100%;
+    box-shadow: 0 .5rem rgba(0, 0, 0, 0.1);
+
+}
+.empresa .row .content{
+    flex: 1 1 50rem;
+}
+.empresa .row .content h3{
+    font-size: 3.5rem;
+    color: white;
+}
+.empresa .row .content h3 span{
+    color: rgb(1, 180, 1);
+}
+.empresa .row .content p{
+    
+    font-size: 1.6rem;
+    text-transform: none;
+    color: white;
+    padding: 2rem 0;
+    line-height: 2;
+}
+.empresa .btn{
+    background: green;
+    color: white;
+    border: 1px solid #fff;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.empresa .btn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-weight: 600;
+}
+/*blog*/
+
+.blog{
+    
+}
+.blog .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 4rem;
+   background-color: white;
+   
+   
+
+
+}
+.blog .box-container .box{
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+
+}
+.blog .box-container .box img{
+    width: 100%;
+    height: 25rem;
+    border-radius: .5rem;
+    object-fit: cover;
+    transition:  1s linear;
+}
+.blog .box-container .box img:hover{
+    transform: scale(1.1);
+}
+
+
+
+.blog .box-container .box .icons{
+    display: inline-block;
+    top: -2rem;
+    background: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    position: relative;
+}
+.blog .box-container .box .icons a{
+    color: black;
+    font-size: 1.4rem;
+    margin: 0 1rem;
+}
+.blog .box-container .box .icons a:hover{
+    color: gold;
+}
+.blog .box-container .box .icons a i{
+    color: black;
+    padding-right: .5rem;
+}
+.blog .box-container .box h3{
+    font-size: 2rem;
+    color: black;
+}
+.blog .box-container .box p{
+    color: rgb(197, 178, 178);
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+/*RODAPE*/
+
+.rodape{
+    background-color: red;
+    text-align: center;
+}
+.rodape .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 2rem;
+}
+.rodape .box-container .box h3{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    color: white;
+    padding: 1rem 0;
+    font-family: "Anta", sans-serif; 
+
+}
+.rodape .box-container .box p{
+    font-size: 1.2rem;
+    color: white;
+    line-height: 2;
+    padding: 1rem 0;
+
+}
+.rodape .box-container .box .organizar {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 5%;
+    padding: 15px;
+    
+}
+.rodape .box-container .box .redes-sociais{
+    margin-top: 1rem;
+
+}
+
+.rodape .box-container .box .redes-sociais a{
+    color: white;
+    border: .1px solid white;
+    border-radius: 10%;
+  width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-right: .3rem;
+
+
+}
+.rodape .box-container .box .redes-sociais a:hover{
+    background-color: white;
+    color: black;
+    border: .1rem solid white;
+}
+.rodape .box-container .box .link {
+    display: block;
+    font-size: 1.7rem;
+    line-height: 2;
+    padding: .5rem 0;
+    text-decoration: underline;
+    color: #fff;
+
+
+}
+.rodape .box-container .box .imagens{
+ 
+}
+
+.rodape .box-container .box .imagens .img-patro{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: .5rem;
+    transition: 1s;
+
+}
+.rodape .box-container .box .imagens .img-patro:hover{
+
+    transform: scale(1.5);
+    border: 1px solid black;
+
+}
+
+.direitos{
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    text-transform: capitalize;
+    border-top: .1rem solid black;
+    width: 100%;
+    height: 100%;
+   
+
+}
+.direitos span{
+    color: blue;
+}
+
+/*CONTATOS*/
+.contatos .icone-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,Minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.contatos .icone-box .icons{
+    text-align: center;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: white;
+}
+.contatos .icone-box .icons i{
+    width: 6rem;
+    height: 6rem;
+    font-size: 2.5rem;
+    line-height: 6rem;
+    background: #eee;
+    border-radius: 50%;
+    color: white;
+    transition: 0.5s;
+}
+.contatos .icone-box .icons:hover i{
+    background: black;
+    color: white;
+    transform: scale(1.1);
+
+}
+.contatos .icone-box .icons h3{
+    font-size: 2rem;
+    color: black;
+    padding: 1rem 0;
+}
+.contatos .icone-box .icons p{
+font-size: 1.7rem;
+color: black;
+line-height: 2;
+font-weight: 600;
+}
+.contatos .row{
+    margin-top: 2rem;
+    text-align: center;
+
+}
+.contatos .row form{
+    padding: 2rem;
+    text-align: center;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .6rem 2.4rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+.contatos .row form h3{
+    font-size: 2.5rem;
+    padding-top: 1rem;
+    color: #130f40;
+}
+.contatos .row form .inputbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contatos .row form .inputbox input{
+    width: 49%;
+}
+.contatos .row form .inputbox .box,
+.contatos .row form textarea{
+padding: 1rem 1.2rem;
+font-size: 1.6rem;
+border: .1rem solid rgba(0, 0, 0, 0.1);
+margin: .7rem 0;
+text-transform: none;
+
+
+    
+}
+.contatos .row form textarea{
+    width: 100%;
+    height: 15rem;
+    resize: none;
+}
+
+.contatos .btn{
+    border: rgba(0, 0, 255, 0.233);
+    font-weight: 600;
+    background-color: yellow;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contatos .btn:hover{
+    background-color: black;
+    border: 1px solid black;
+    color: yellow;
+}
+
+
+
+
+/*CELULAR*/
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+
+    }
+    section{
+        padding: 3rem;
+
+    }
+    .topo-site{
+        padding: 2rem;
+    }
+
+}
+
+
+@media(max-width:768px){
+    .topo-site .icons #menu{
+        display: inline-block;
+    }
+    .topo-site .menu-site{
+        position: absolute;
+        top: 110%;
+        right: 110%;
+        width: 30rem;
+        background-color: black;
+        border-radius: .5rem;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+
+       
+
+    }
+    .topo-site .menu-site.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+   
+    .topo-site .menu-site a{
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+    }
+    .msflix-destaque .slide .content h3{
+        font-size: 4rem;
+    }
+    .topo-site .menu-site a{
+        color: white;
+        border-bottom: 1px solid white;
+        border-bottom-style:dotted ;
+    }
+   
+    
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .msflix-destaque .slide .content h3{
+        font-size: 3.5rem;
+    }
+
+    
+    
+    .topo-site .menu-site a{
+        color: white;
+        border-bottom: 1px solid white;
+        border-bottom-style:dotted ;
+    }
+}
